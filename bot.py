@@ -1,7 +1,8 @@
+import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = "9062280026:AAGRW6TqQ3y-VBHYqNIKps09szhKV04023Y"
+TOKEN = os.getenv"9062280026:AAGRW6TqQ3y-VBHYqNIKps09szhKV04023Y "
 bot = telebot.TeleBot(TOKEN)
 
 ALMAZ = [
@@ -93,7 +94,7 @@ def cb(c):
     elif data == "profile":
         bot.send_message(chat, f"👤 Профиль\nID: {chat}\n💰 Баланс: 0 сомонӣ")
     elif data == "support":
-        bot.send_message(chat, "🆘 Поддержка 24/7\nНапишите: @almaz_support")
+        bot.send_message(chat, "🆘 Поддержка 24/7\nНапишите: @fakirov_09")
     else:
         bot.send_message(chat, "Скоро будет! 🔥")
 
@@ -115,7 +116,7 @@ def get_id(m):
         return
     d = user_data.get(m.chat.id, {})
     total = d.get("price", 0) * d.get("qty", 1)
-    bot.send_message(m.chat.id, f"✅ Заказ принят!\n\n🎮 {d.get('name')}\n🆔 ID: {m.text}\n💰 К оплате: {total:.2f} сомонӣ\n\n📞 Для оплаты: @almaz_support")
+    bot.send_message(m.chat.id, f"✅ Заказ принят!\n\n🎮 {d.get('name')}\n🆔 ID: {m.text}\n💰 К оплате: {total:.2f} сомонӣ\n\n💳 Для оплаты - Alif:\n📱 939992242\n\n📤 После оплаты чек отправьте сюда: @fakirov_09")
 
 print("Бот кор карда истодааст...")
 bot.infinity_polling()
