@@ -2,7 +2,7 @@ import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = os.getenv"9062280026:AAGRW6TqQ3y-VBHYqNIKps09szhKV04023Y "
+TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 ALMAZ = [
